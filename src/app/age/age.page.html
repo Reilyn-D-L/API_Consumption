@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Age</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="calculateAge()">Calculate Age</ion-button>
+
+  <ion-card *ngIf="ages">
+    <ion-card-header>
+      <ion-icon [name]="icon"></ion-icon>
+      <h2>{{ status }}</h2>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Edad: {{ ages }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
